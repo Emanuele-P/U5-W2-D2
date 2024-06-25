@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @ToString
 public class Author {
-    private long id;
+    private int id;
     private String name;
     private String surname;
     private LocalDate dayOfBirth;
