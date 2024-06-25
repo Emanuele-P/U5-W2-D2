@@ -20,6 +20,7 @@ public class AuthorService {
     public Author save(Author body) {
         Random random = new Random();
         body.setId((random.nextInt(10000, 99999)));
+        body.setAvatar("https://ui-avatars.com/api/?name=" + body.getName() + body.getSurname());
         this.authors.add(body);
         return body;
     }
@@ -43,8 +44,9 @@ public class AuthorService {
                 found = author;
                 found.setName((updatedAuthor.getName()));
                 found.setSurname((updatedAuthor.getSurname()));
+                found.setMail((updatedAuthor.getMail()));
                 found.setDayOfBirth((updatedAuthor.getDayOfBirth()));
-                found.setAvatar((updatedAuthor.getAvatar()));
+                found.setAvatar("https://ui-avatars.com/api/?name=" + updatedAuthor.getName() + updatedAuthor.getSurname());
             }
         }
         if (found != null) {

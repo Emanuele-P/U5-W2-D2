@@ -15,6 +15,7 @@ public class Author {
     private int id;
     private String name;
     private String surname;
+    private String mail;
     private LocalDate dayOfBirth;
     private String avatar;
 }
